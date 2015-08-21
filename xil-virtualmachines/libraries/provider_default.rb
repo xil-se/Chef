@@ -38,6 +38,7 @@ class Chef
                   '--keep-unit',
                   '--boot',
                   '--network-bridge=br0',
+                  "-m #{@current_resource.name}"
                  ]
 
 
@@ -69,7 +70,7 @@ class Chef
             ],
             [])
         rescue Exception => e
-          #Chef::Application.fatal!("Failed to start #{@current_resource.name}, check : systemctl status systemd-nspawn-#{@current_resource.name}.service")
+          Chef::Application.fatal!("Failed to start #{@current_resource.name}, check : systemctl status systemd-nspawn-#{@current_resource.name}.service")
         end
 
       end
