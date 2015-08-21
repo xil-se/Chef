@@ -1,0 +1,24 @@
+---
+driver:
+  name: nspawn
+  dry_run: false
+
+transport:
+  name: ssh
+  compression: none
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: false
+
+platforms:
+- name: onecom-wheezy
+  driver_config:
+    image: chef
+
+suites:
+- name: default
+  run_list:
+    - recipe[xil-virtualmachines::default]
+  attributes:
+
