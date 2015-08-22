@@ -30,6 +30,7 @@ class Chef
 
         if running_machies.include?(@current_resource.name)
           return
+          @new_resource.updated_by_last_action(false)
         end
 
         options = [
@@ -38,7 +39,6 @@ class Chef
                   '--keep-unit',
                   '--boot',
                   '--network-bridge=br0',
-                  "-m #{@current_resource.name}"
                  ]
 
 
@@ -69,6 +69,8 @@ class Chef
                 ['Delegate', true],
             ],
             [])
+          @new_resource.updated_by_last_action(true)
+
         rescue Exception => e
           Chef::Application.fatal!("Failed to start #{@current_resource.name}, check : systemctl status systemd-nspawn-#{@current_resource.name}.service")
         end
@@ -80,6 +82,15 @@ class Chef
         if running_machies.include?(@current_resource.name)
           @current_resource.machine_manager.KillMachine(@current_resource.name, "leader", 38)
           #38 = KILLMODE MIN + 4 it seems :D
+          @new_resource.updated_by_last_action(true)
+        end
+      end
+
+      def action_kill
+        running_machies = list_machines()
+        if running_machies.include?(@current_resource.name)
+          @current_resource.machine_manager.TerminateMachine(@current_resource.name)
+          @new_resource.updated_by_last_action(true)
         end
       end
 

@@ -11,7 +11,7 @@ class Chef
         @resource_name = :nspawn          # Bind ourselves to the name with an underscore
         @provider = Chef::Provider::Nspawn # We need to tie to our provider
         @action = :enable                      # Default Action Goes here
-        @allowed_actions = [:start, :stop]
+        @allowed_actions = [:start, :stop, :kill]
 
 
         @sysbus = DBus.system_bus
