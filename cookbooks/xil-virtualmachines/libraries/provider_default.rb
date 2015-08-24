@@ -46,7 +46,7 @@ class Chef
                   '--boot',
                   '--network-bridge=br0',
                   "--machine=#{@current_resource.name}",
-                  "--bind-ro=/var/lib/machines/guest-config/#{@current_resource.name}/:/etc/xil.se",
+                  "--bind=/var/lib/machines/guest-config/#{@current_resource.name}/:/etc/xil.se",
                  ]
 
 
