@@ -13,7 +13,7 @@ node['xil']['virtualmachines'].each do |n,v|
   directory "/var/lib/machines/guest-config/#{n}/network/" do
     owner 'root'
     group 'root'
-    mode '0600'
+    mode '0644'
     recursive true
     action :create
   end
@@ -22,7 +22,7 @@ node['xil']['virtualmachines'].each do |n,v|
     source 'wired.conf.erb'
     owner 'root'
     group 'root'
-    mode '0600'
+    mode '0644'
     variables(v)
   end
 
