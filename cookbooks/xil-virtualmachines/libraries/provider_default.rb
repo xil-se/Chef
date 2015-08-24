@@ -45,6 +45,7 @@ class Chef
                   '--keep-unit',
                   '--boot',
                   '--network-bridge=br0',
+                  "--machine=#{@current_resource.name}",
                  ]
 
 
@@ -52,7 +53,6 @@ class Chef
           extraoptions = [
             "--directory=/var/lib/machines/#{@current_resource.server_template}",
             "-x",
-            "--machine=#{@current_resource.name}",
           ]
         else
           extraoptions = [
