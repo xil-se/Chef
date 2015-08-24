@@ -10,6 +10,22 @@
 #end
 
 node['xil']['virtualmachines'].each do |n,v|
+  directory "/var/lib/machines/guest-config/#{n}/network/" do
+    owner 'root'
+    group 'root'
+    mode '0755'
+    recursive true
+    action :create
+  end
+
+  template "/var/lib/machines/guest-config/#{n}/network/wired.conf" do
+    source 'wired.conf.erb'
+    owner 'root'
+    group 'root'
+    mode '0755'
+    variables(v)
+  end
+
   if v["ensure"] == "running"
     nspawn n do
       action :start
