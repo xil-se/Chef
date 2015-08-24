@@ -1,0 +1,17 @@
+{
+    "chef_environment": "_default",
+    "name": "vps.xil.se",
+    "normal": {
+        "tags": [],
+        "xil": {
+            "virtualmachines": {
+                "inventory.xil.se": {
+                    "ensure": "running",
+                    "template": "archtemplate",
+                    "temporary": true
+                }
+            }
+        }
+    },
+    "run_list": []
+}

@@ -29,8 +29,14 @@ class Chef
         running_machies = list_machines()
 
         if running_machies.include?(@current_resource.name)
-          return
           @new_resource.updated_by_last_action(false)
+          return
+        end
+
+
+        if @current_resource.server_template.nil?
+          Chef::Application.fatal!("Failed to start #{@current_resource.name}, template missing")
+          return
         end
 
         options = [
@@ -44,15 +50,18 @@ class Chef
 
         if current_resource.temporary
           extraoptions = [
-            "--directory /var/lib/machines/#{@current_resource.server_template}",
-            "-x"
+            "--directory=/var/lib/machines/#{@current_resource.server_template}",
+            "-x",
+            "--machine=#{@current_resource.name}",
           ]
         else
           extraoptions = [
-            "--directory /var/lib/machines/#{@current_resource.name}",
-            "--template /var/lib/machines/#{@current_resource.server_template}"
+            "--directory=/var/lib/machines/#{@current_resource.name}",
+            "--template=/var/lib/machines/#{@current_resource.server_template}"
           ]
         end
+
+
 
 
         begin
@@ -62,7 +71,7 @@ class Chef
               [
                 ['Type', 'notify'],
                 ['ExecStart', DBus.variant('a(sasb)', [[
-                  '/usr/bin/systemd-nspawn', options + extraoptions,
+                  '/usr/bin/systemd-nspawn', options.concat(extraoptions),
                   false]])
                 ],
                 ['KillMode', 'mixed'],
