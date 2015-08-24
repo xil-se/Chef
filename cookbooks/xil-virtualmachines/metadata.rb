@@ -1,6 +1,6 @@
 name             "xil-virtualmachines"
-maintainer       "Your name"
-maintainer_email "YOUR-EMAIL@xil.se"
+maintainer       "Simon Vikstrom"
+maintainer_email "simon@xil.se"
 license          "ALL the rights reserved"
 description      "add-description"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
