@@ -13,5 +13,5 @@
             }
         }
     },
-    "run_list": []
+    "run_list": ["recipe[xil-virtualmachines]"]
 }
