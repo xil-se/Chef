@@ -1,0 +1,11 @@
+[Match]
+Name=host*
+
+[Network]
+<% if @ip.nil? -%>
+DHCP=yes
+<% elsif ! (@ip.nil? && @gateway.nil?) %>
+Address=<%= @ip %>
+Gateway=<%= @gateway %>
+<% end -%>
+
