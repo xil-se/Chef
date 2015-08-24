@@ -13,7 +13,7 @@ node['xil']['virtualmachines'].each do |n,v|
   directory "/var/lib/machines/guest-config/#{n}/network/" do
     owner 'root'
     group 'root'
-    mode '0644'
+    mode '0755'
     recursive true
     action :create
   end
