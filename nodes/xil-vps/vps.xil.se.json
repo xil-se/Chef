@@ -8,8 +8,14 @@
                 "inventory.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
-                    "ip" : "192.168.1.2/16",
-                    "gateway" : "192.168.0.1"
+                    "ipv4" : {
+	               "addresses" : ["192.168.1.2/16"],
+        	       "gateway" : "192.168.0.1"
+                    },
+                    "ipv6" : {
+                        "addresses" : ["fd42:454:e661:0:f4b9::1/64"],
+			"gateway" : "fd42:454:e661::1"
+                    }
                 },
                 "soontodie.xil.se": {
                     "ensure": "running",

@@ -2,10 +2,22 @@
 Name=host*
 
 [Network]
-<% if @ip.nil? -%>
+<% if (@ipv4.nil? && ipv6.nil?) -%>
 DHCP=yes
-<% elsif ! (@ip.nil? && @gateway.nil?) %>
-Address=<%= @ip %>
-Gateway=<%= @gateway %>
-<% end -%>
+<% end %>
 
+
+
+<% if ! @ipv4.nil? %>
+<% @ipv4["addresses"].each do |k| %>
+Address=<%= k %>
+<% end %>
+Gateway=<%= @ipv4["gateway"] %>
+<% end %>
+
+<% if ! @ipv6.nil? %>
+<% @ipv6["addresses"].each do |k| %>
+Address=<%= k %>
+<% end %>
+Gateway=<%= @ipv6["gateway"] %>
+<% end %>
