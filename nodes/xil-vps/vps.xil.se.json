@@ -5,7 +5,7 @@
         "tags": [],
         "xil": {
             "virtualmachines": {
-                "inventory.xil.se": {
+                "webproxy.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
                     "ipv4" : {
@@ -17,26 +17,19 @@
 			"gateway" : "fd42:454:e661::1"
                     }
                 },
-                "soontodie.xil.se": {
+                "jabber.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
-                    "temporary" : true
-                },
-                "konnysbuild.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "temporary" : true
-                },
-                "chef.xil.se": {
-                   "ipv4" : {
-                       "addresses" : ["192.168.1.3/16"],
-                       "gateway" : "192.168.0.1"
+                    "ipv4" : {
+	               "addresses" : ["192.168.1.3/16"],
+        	       "gateway" : "192.168.0.1"
                     },
-
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "temporary" : true
+                    "ipv6" : {
+                        "addresses" : ["fd42:454:e661:0:74ba::2/64"],
+			"gateway" : "fd42:454:e661::1"
+                    }
                 }
+
             }
         }
     },
