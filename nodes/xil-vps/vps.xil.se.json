@@ -68,6 +68,14 @@
 	               "addresses" : ["192.168.1.8/16"],
         	       "gateway" : "192.168.0.1"
                     }
+                },
+                "dns.xil.se": {
+                    "ensure": "running",
+                    "template": "archtemplate",
+                    "ipv4" : {
+	               "addresses" : ["192.168.1.9/16"],
+        	       "gateway" : "192.168.0.1"
+                    }
                 }
             }
         }

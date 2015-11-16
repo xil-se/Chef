@@ -2,11 +2,6 @@
 Name=host*
 
 [Network]
-<% if (defined? @ipv4 && defined? ipv6) -%>
-DHCP=yes
-<% end %>
-
-
 
 <% if defined? @ipv4 %>
 <% @ipv4["addresses"].each do |k| %>
