@@ -100,6 +100,14 @@
 	               "addresses" : ["192.168.1.12/16"],
         	       "gateway" : "192.168.0.1"
                     }
+                },
+                "simonshell.xil.se": {
+                    "ensure": "running",
+                    "template": "archtemplate",
+                    "ipv4" : {
+	               "addresses" : ["192.168.1.13/16"],
+        	       "gateway" : "192.168.0.1"
+                    }
                 }
             }
         }
