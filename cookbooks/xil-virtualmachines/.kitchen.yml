@@ -1,20 +1,12 @@
 ---
 driver:
-  name: nspawn
-  dry_run: false
+  name: qemu
 
-transport:
-  name: ssh
-  compression: none
-
-provisioner:
-  name: chef_zero
-  require_chef_omnibus: false
 
 platforms:
-- name: onecom-wheezy
-  driver_config:
-    image: chef
+- name: jessie
+  driver:
+    image: /home/simon/qemu_images/jessie.qcow2
 
 suites:
 - name: default

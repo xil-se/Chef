@@ -1,0 +1,17 @@
+---
+driver:
+  name: qemu
+
+
+platforms:
+- name: jessie
+  driver:
+    image: /home/simon/qemu_images/jessie.qcow2
+
+suites:
+- name: default
+  run_list:
+    - recipe[xil-baseline::default]
+  attributes:
+    packages:
+      "git" : true

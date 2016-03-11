@@ -1,0 +1,8 @@
+PATH
+  remote: .
+  specs:
+    xil-baseline (0.1.0)
+
+DEPENDENCIES
+  xil-baseline (>= 0)
+
