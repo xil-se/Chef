@@ -15,3 +15,22 @@ suites:
   attributes:
     packages:
       "git" : true
+      "build-essential" : true
+      "curl" : true
+      "unzip" : true
+      "wget" : true
+      "zsh" : true
+      "python-numpy" : true
+      "python-sympy" : true
+      "python-crypto" : true
+      "python-pip" : true
+      "ipython" : true
+      "bpython" : true
+      "john" : true
+      "python2.7" : true
+      "python-dev" : true
+      "gdb" : true
+    pip_packages:
+      "git+https://github.com/binjitsu/binjitsu.git" : true
+      "capstone" : true
+      "ropgadget" : true

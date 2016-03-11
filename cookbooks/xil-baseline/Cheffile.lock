@@ -1,8 +1,26 @@
+SITE
+  remote: https://supermarket.getchef.com/api/v1
+  specs:
+    7-zip (1.0.2)
+      windows (>= 1.2.2)
+    build-essential (2.3.1)
+      7-zip (>= 0.0.0)
+    chef_handler (1.3.0)
+    python (1.4.6)
+      build-essential (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+    windows (1.39.2)
+      chef_handler (>= 0.0.0)
+    yum (3.10.0)
+    yum-epel (0.6.6)
+      yum (~> 3.10.0)
+
 PATH
   remote: .
   specs:
     xil-baseline (0.1.0)
 
 DEPENDENCIES
+  python (~> 1.4.6)
   xil-baseline (>= 0)
 
