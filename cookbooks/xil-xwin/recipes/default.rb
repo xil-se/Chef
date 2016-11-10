@@ -1,4 +1,4 @@
-if(node['platform']['arch'])
+if(node['platform']['arch'] == "arch")
 	packages = %w[
 		xf86-input-synaptics
 		xf86-video-vesa
