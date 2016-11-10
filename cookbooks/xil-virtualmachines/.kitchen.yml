@@ -6,7 +6,9 @@ driver:
 platforms:
 - name: jessie
   driver:
-    image: /home/simon/qemu_images/jessie.qcow2
+    image: /home/simon/qemu_images/arch.qcow2
+    display: gtk
+    bios: /usr/share/ovmf/ovmf_x64.bin    
 
 suites:
 - name: default

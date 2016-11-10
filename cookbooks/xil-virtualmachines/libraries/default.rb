@@ -1,5 +1,6 @@
 require 'chef/resource'
 require 'dbus'
+
 class Chef
   class Resource
     class  Nspawn < Chef::Resource

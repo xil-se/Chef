@@ -9,6 +9,8 @@
 #  server_template "arch1"
 #end
 
+gem_package "dbus"
+
 node['xil']['virtualmachines'].each do |n,v|
   directory "/var/lib/machines/guest-config/#{n}/network/" do
     owner 'root'
