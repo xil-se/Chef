@@ -11,4 +11,8 @@ execute 'pacman-update' do
   action :nothing
 end
 
-
+node['pacman']['packages'].each do |k,v|
+	package "#{k}" do
+		action v.to_sym
+	end
+end

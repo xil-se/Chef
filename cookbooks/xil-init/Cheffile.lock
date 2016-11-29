@@ -1,4 +1,9 @@
 PATH
+  remote: .
+  specs:
+    xil-init (0.0.1)
+
+PATH
   remote: ../xil-pacman/
   specs:
     xil-pacman (0.0.1)
@@ -14,6 +19,7 @@ PATH
     xil-xwin (0.0.1)
 
 DEPENDENCIES
+  xil-init (>= 0)
   xil-pacman (>= 0)
   xil-users (>= 0)
   xil-xwin (>= 0)

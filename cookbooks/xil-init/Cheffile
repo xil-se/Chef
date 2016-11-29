@@ -1,6 +1,9 @@
 site "https://supermarket.getchef.com/api/v1"
 
+
+
+cookbook "xil-init",   :path => "."
+cookbook "xil-pacman", :path => "../xil-pacman/"
 cookbook "xil-users",  :path => "../xil-users/"
 cookbook "xil-xwin",   :path => "../xil-xwin/"
-cookbook "xil-pacman", :path => "../xil-pacman/"
 

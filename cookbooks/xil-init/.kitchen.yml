@@ -6,7 +6,7 @@ driver:
 platforms:
 - name: arch
   driver:
-    image: /home/simon/qemu_images/arch.qcow2
+    image: arch.qcow2
     display: gtk
     bios: /usr/share/ovmf/ovmf_x64.bin    
 
@@ -17,7 +17,5 @@ provisioner:
 suites:
 - name: default
   run_list:
-    - recipe[xil-pacman::default]
-    - recipe[xil-users::default]
-    - recipe[xil-xwin::default]
+    - recipe[xil-init::default]
   attributes:
