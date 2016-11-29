@@ -3,7 +3,7 @@
     "chef_environment": "_default",
     "name": "pc1.hs.xil.se",
     "normal": {
-        "tags": [],
+        "tags": []
     },
     "run_list": ["recipe[xil-init]"]
 }
