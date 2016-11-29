@@ -1,4 +1,4 @@
-default['pacman']['packages'].merge!({
+default['pacman']['packagessx'].merge!({
 	"ctags"		=> "upgrade", 
 	"vim"		=> "upgrade", 
 	"vim-taglist"	=> "upgrade", 
@@ -23,7 +23,7 @@ default['pacman']['packages'].merge!({
 
 
 # Base devel expanded
-default['pacman']['packages'].merge!({
+default['pacman']['packagess'].merge!({
 	"autoconf"	=> "upgrade",
 	"automake"	=> "upgrade",
 	"binutils"	=> "upgrade",
