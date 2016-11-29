@@ -11,7 +11,6 @@ if(node['platform']['arch'] == "arch")
 		i3-wm
 		dmenu
 		i3status
-		extra
 	]	
 end
 

@@ -1,0 +1,5 @@
+name 'xil-pacman'
+maintainer 'Xil'
+maintainer_email 'xil@devsn.se'
+license 'BSD'
+version '0.0.1'

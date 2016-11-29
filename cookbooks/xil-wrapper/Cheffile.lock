@@ -1,0 +1,20 @@
+PATH
+  remote: ../xil-pacman/
+  specs:
+    xil-pacman (0.0.1)
+
+PATH
+  remote: ../xil-users/
+  specs:
+    xil-users (0.0.1)
+
+PATH
+  remote: ../xil-xwin/
+  specs:
+    xil-xwin (0.0.1)
+
+DEPENDENCIES
+  xil-pacman (>= 0)
+  xil-users (>= 0)
+  xil-xwin (>= 0)
+
