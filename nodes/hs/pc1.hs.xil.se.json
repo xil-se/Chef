@@ -3,7 +3,10 @@
     "chef_environment": "_default",
     "name": "pc1.hs.xil.se",
     "normal": {
-        "tags": []
+        "tags": [],
+        "pacman" : {
+           "mirror" : "http://192.168.2.1"
+	}
     },
     "run_list": ["recipe[xil-init]"]
 }
