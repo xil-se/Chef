@@ -8,7 +8,10 @@ platforms:
   driver:
     image: arch.qcow2
     display: gtk
-    bios: /usr/share/ovmf/ovmf_x64.bin    
+    bios: /usr/share/ovmf/ovmf_x64.bin   
+    networks:
+      - netdev: user,id=user,net=192.168.2.0/24,hostname=%h,hostfwd=tcp::%p-:22
+        device: virtio-net-pci,netdev=user
 
 provisioner:
     name: chef_zero
@@ -18,4 +21,10 @@ suites:
 - name: default
   run_list:
     - recipe[xil-init::default]
-  attributes:
+  attributes: {
+	"pacman" : {
+		"mirror" : "http://192.168.1.99"
+	}
+  }
+      
+
