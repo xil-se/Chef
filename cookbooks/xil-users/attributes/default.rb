@@ -23,6 +23,8 @@ node.default['xil_users']['users'].merge!({
 		"comment" => "Leet haxxor as well",		
 		"wm" => "startxfce4",
 		"password" => "$1$xyz$X11iz6ox24iPDed6detyU.",
+		"dotgit" => "https://github.com/kbeckmann/config.git",
+
 	},
 	"david" => {
 		"uid"=> 3003,
@@ -32,5 +34,4 @@ node.default['xil_users']['users'].merge!({
 		"wm" => "i3",
 		"password" => "$1$xyz$X11iz6ox24iPDed6detyU.",
 	},
-
 })

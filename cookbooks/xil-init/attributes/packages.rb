@@ -27,12 +27,12 @@ default['pacman']['packages'].merge!({
 	"procps-ng"	=> "upgrade",
 	"psmisc"	=> "upgrade",
 	"usbutils"	=> "upgrade",
-	
+	"git"		=> "upgrade",	
 })
 
 
 # Base devel expanded
-default['pacman']['packages_donotrun'].merge!({
+default['pacman']['packages'].merge!({
 	"autoconf"	=> "upgrade",
 	"automake"	=> "upgrade",
 	"binutils"	=> "upgrade",

@@ -44,6 +44,27 @@ node["xil_users"]["users"].each do |user, options|
 			variables wm: options['wm']
 			only_if { ! options['wm'].nil? }
 		end
+
+		if ! options["dotgit"].nil?
+
+			git "#{home_dir}/.dotfiles" do
+				user options["uid"]
+				group options["gid"] if options["gid"]
+				repository "#{options["dotgit"]}"
+				action :sync
+				enable_submodules true
+				ignore_failure true
+				notifies :run, "execute[rsyncgit]"
+			end	
+
+			execute "rsyncgit" do
+				command "rsync -a --delete #{home_dir}/.dotfiles/ #{home_dir}/"
+				action :nothing
+			end
+		end
+
 	end
+
+	
 
 end
