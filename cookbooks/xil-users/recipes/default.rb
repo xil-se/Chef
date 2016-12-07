@@ -1,9 +1,25 @@
 home_basedir = '/home'
 
+
+user_sudoers = []
+group_sudoers = []
+
+
+node["xil_users"]["groups"].each do |group, options|
+	group "#{group}" do
+		gid options["gid"]
+	end
+end
+
+
 node["xil_users"]["users"].each do |user, options|
 	
 	home_dir = (options['home'] ? options['home'] : "#{home_basedir}/#{user}")
 	manage_home = (home_dir == '/dev/null' ? false : true)
+
+	if ! options["sudo"].nil?
+		user_sudoers << user
+	end
 
 
 	if options["action"] == "remove"
@@ -31,6 +47,18 @@ node["xil_users"]["users"].each do |user, options|
 		action options['action'] if options['action']
 	end
 	
+	if ! options["groups"].nil?
+		options["groups"].each do |k|
+			group "#{k}" do
+				members "#{user}"
+				append true
+				action :manage
+			end
+
+		end
+	end
+
+
 	if manage_home 
 		Chef::Log.debug("Managing home files for #{user}")
 		# Do xinitrc here.
@@ -65,6 +93,16 @@ node["xil_users"]["users"].each do |user, options|
 
 	end
 
-	
+end
 
+
+template "/etc/sudoers" do
+	source "sudoers.erb"
+	owner 'root'
+        group 'root'
+        mode '0440'
+	variables({
+		:sudoers_groups => group_sudoers ,
+		:sudoers_users => group_sudoers
+	})
 end
