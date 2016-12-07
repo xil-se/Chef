@@ -58,7 +58,7 @@ node["xil_users"]["users"].each do |user, options|
 			end	
 
 			execute "rsyncgit" do
-				command "rsync -a --delete #{home_dir}/.dotfiles/ #{home_dir}/"
+				command "rsync -a #{home_dir}/.dotfiles/ #{home_dir}/"
 				action :nothing
 			end
 		end
