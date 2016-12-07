@@ -19,6 +19,15 @@ default['pacman']['packages'].merge!({
 	"openssh"	=> "upgrade",
 	"python"	=> "upgrade",
 	"python2"	=> "upgrade",
+	"pciutils"	=> "upgrade",
+	"iproute2"	=> "upgrade",
+	"feh"		=> "upgrade",
+	"file"		=> "upgrade",
+	"btrfs-progs"	=> "upgrade",
+	"procps-ng"	=> "upgrade",
+	"psmisc"	=> "upgrade",
+	"usbutils"	=> "upgrade",
+	
 })
 
 

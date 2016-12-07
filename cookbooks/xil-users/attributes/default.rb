@@ -21,7 +21,7 @@ node.default['xil_users']['users'].merge!({
 		"gid"=> 3002,
 		"shell"=>"/bin/zsh",
 		"comment" => "Leet haxxor as well",		
-		"wm" => "xfwm4",
+		"wm" => "startxfce4",
 		"password" => "$1$xyz$X11iz6ox24iPDed6detyU.",
 	}
 })

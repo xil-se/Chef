@@ -10,6 +10,26 @@ default['pacman']['packages'].merge!({
         "dmenu" => "upgrade",
         "i3status" => "upgrade",
         "notion" => "upgrade",
+	"xterm" => "upgrade",
+	"rxvt-unicode" => "upgrade",
+	"urxvt-perls" => "upgrade",
+	"ttf-dejavu" => "upgrade",
+#XFCE GROUP EXPANDED
+        "exo" => "upgrade",
+        "garcon" => "upgrade",
+        "gtk-xfce-engine" => "upgrade",
+        "thunar" => "upgrade",
+        "thunar-volman" => "upgrade",
+        "tumbler" => "upgrade",
+        "xfce4-appfinder" => "upgrade",
+        "xfce4-mixer" => "upgrade",
+        "xfce4-panel" => "upgrade",
+        "xfce4-power-manager" => "upgrade",
+        "xfce4-session" => "upgrade",
+        "xfce4-settings" => "upgrade",
+        "xfce4-terminal" => "upgrade",
+        "xfconf" => "upgrade",
+        "xfdesktop" => "upgrade",
         "xfwm4" => "upgrade",
-	"xterm" => "upgrade"
+        "xfwm4-themes" => "upgrade"
 })
