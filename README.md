@@ -1,6 +1,6 @@
 # Chef cookbooks for the xil-team
 ## Filesystem
-We're using https://github.com/One-com/chef_delivery for delivery from git to chef.
+We're using https://github.com/One-com/running_sushi for delivery from git to chef.
 
 We use the following folder structure:
 
@@ -19,4 +19,4 @@ We use the following folder structure:
 All cookbooks end up on all chef servers and are located in the cookbooks folder.
 
 
-You can find full delivery doc. on https://github.com/One-com/chef_delivery/blob/master/README.md
+You can find full delivery doc. on https://github.com/One-com/running_sushi/blob/master/README.md
