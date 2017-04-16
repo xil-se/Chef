@@ -23,7 +23,7 @@ suites:
     - recipe[xil-init::default]
   attributes: {
 	"pacman" : {
-		"mirror" : "http://mirror.one.com"
+		"mirror" : "http://192.168.1.103/"
 	}
   }
       

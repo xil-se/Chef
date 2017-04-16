@@ -161,6 +161,14 @@
 	               "addresses" : ["192.168.1.19/16"],
         	       "gateway" : "192.168.0.1"
                     }
+                },
+                "smtp.xil.se": {
+                    "ensure": "running",
+                    "template": "archtemplate",
+                    "ipv4" : {
+	               "addresses" : ["192.168.1.20/16"],
+        	       "gateway" : "192.168.0.1"
+                    }
                 }
             }
         }
