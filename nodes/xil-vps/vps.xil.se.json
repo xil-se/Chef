@@ -122,14 +122,6 @@
         	       "gateway" : "192.168.0.1"
                     }
                 },
-                "unifi.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.16/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
                 "git.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
