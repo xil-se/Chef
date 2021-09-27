@@ -29,14 +29,6 @@
 			"gateway" : "fd42:454:e661::1"
                     }
                 },
-                "cccproxxy.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.4/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
                 "website.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
@@ -114,27 +106,11 @@
         	       "gateway" : "192.168.0.1"
                     }
                 },
-                "ctf.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.15/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
                 "git.xil.se": {
                     "ensure": "running",
                     "template": "archtemplate",
                     "ipv4" : {
 	               "addresses" : ["192.168.1.17/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
-                "repo.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.18/16"],
         	       "gateway" : "192.168.0.1"
                     }
                 },
@@ -151,30 +127,6 @@
                     "template": "archtemplate",
                     "ipv4" : {
 	               "addresses" : ["192.168.1.20/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
-                "mattermost.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.21/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
-                "jupyter.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.23/16"],
-        	       "gateway" : "192.168.0.1"
-                    }
-                },
-                "partkeepr.xil.se": {
-                    "ensure": "running",
-                    "template": "archtemplate",
-                    "ipv4" : {
-	               "addresses" : ["192.168.1.24/16"],
         	       "gateway" : "192.168.0.1"
                     }
                 },
